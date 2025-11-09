@@ -23,3 +23,16 @@ $breakpoints-down: (
         @content;
     }
 }
+
+// Notes on how to use the breakpoints mixins:
+// To apply styles for screens medium and larger:
+// @include breakpoint-up('medium') {
+//     // styles here
+// }
+
+// To apply on an html element:
+// .example-class {
+//     @include breakpoint-down('large') {
+//         // styles here
+//     }
+// }
