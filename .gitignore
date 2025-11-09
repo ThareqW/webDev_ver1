@@ -1,0 +1,32 @@
+# Ignore node modules (if using npm/yarn)
+node_modules/
+
+# Ignore build or dist output
+dist/
+build/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.cache
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files (if using APIs or private keys)
+.env
+
+# Ignore editor/IDE folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore dependency lock files (optional, depending on team setup)
+# package-lock.json
+# yarn.lock
+
+*.sketch
+*.xd
+*.fig
