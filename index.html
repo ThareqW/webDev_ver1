@@ -14,6 +14,13 @@
     />
     <link rel="stylesheet" href="/dist/style.css" />
 
+    <!--defer is an attribute to control how external JavaScript files are
+     loaded and executed with the following mechanism:
+     1. The script downloads in parallel with HTML parsing
+     2. But it does NOT execute until HTML parsing is fully complete
+     3. Scripts run in order, top to bottom.-->
+    <script defer src="/dist/script.js"></script>
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
