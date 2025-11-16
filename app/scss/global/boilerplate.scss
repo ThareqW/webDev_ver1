@@ -1,0 +1,18 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-inter);
+}
+
+// *, *::before, *::after is a common pattern to ensure that the box-sizing 
+// property is inherited by all elements, including pseudo-elements. 
+// This helps maintain consistent sizing behavior across the entire document. 
