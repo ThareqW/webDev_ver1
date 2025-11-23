@@ -3,7 +3,12 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+// *, *::before, *::after is a common pattern to ensure that the box-sizing 
+// property is inherited by all elements, including pseudo-elements. 
+// This helps maintain consistent sizing behavior across the entire document. 
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -11,8 +16,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-inter);
+    background: var(--background);
+    color: var(--text-color)
 }
 
-// *, *::before, *::after is a common pattern to ensure that the box-sizing 
-// property is inherited by all elements, including pseudo-elements. 
-// This helps maintain consistent sizing behavior across the entire document. 
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

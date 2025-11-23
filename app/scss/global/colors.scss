@@ -3,7 +3,7 @@
     --color-blue-500: hsl(208, 92%, 53%);
     --color-green-500: hsl(163, 72%, 41%);
     --color-red-500: hsl(356, 69%, 56%);
-    
+
     /* Social Media Colors */
     --color-facebook-blue: hsl(208, 92%, 53%);
     --color-twitter-blue: hsl(203, 89%, 53%);
@@ -11,24 +11,68 @@
     --color-instagram-gradient-middle: hsl(5, 77%, 71%);
     --color-instagram-gradient-end: hsl(329, 70%, 58%);
     --color-youtube-red: hsl(348, 97%, 39%);
-    
+
     /* Toggle Colors */
-    --color-toggle-gradient-start-dark: hsl(210, 79%, 56%);
-    --color-toggle-gradient-end-dark: hsl(146, 68%, 55%);
-    --color-toggle-gray-light: hsl(230, 22%, 74%);
-    
+    --color-toggle-gradient-bg-start-dark: hsl(210, 79%, 56%);
+    --color-toggle-gradient-bg-end-dark: hsl(146, 68%, 55%);
+    --color-toggle-gradient-bg-light: hsl(230, 22%, 74%);
+    --color-toggle-light: hsl(230, 19%, 60%);
+    --color-toggle-button-light: hsl(228, 46%, 96%);
+
     /* Neutral Colors - Dark Theme */
     --color-bg-dark: hsl(230, 17%, 14%);
     --color-top-bg-pattern-dark: hsl(232, 19%, 15%);
     --color-card-bg-dark: hsl(228, 28%, 20%);
-    --color-text-dark-gray: hsl(230, 22%, 74%);
-    --color-text-dark-white: hsl(0, 100%, 100%);
-    
+    --color-card-bg-dark-hover: hsl(228, 25%, 27%);
+    --color-text-dark-gray: hsl(230, 34%, 66%);
+    --color-text-dark-white: hsl(0, 0%, 100%);
+
     /* Neutral Colors - Light Theme */
-    --color-bg-light: hsl(0, 100%, 100%);
+    --color-bg-light: hsl(0, 0%, 100%);
     --color-top-bg-pattern-light: hsl(225, 100%, 98%);
     --color-card-bg-light: hsl(227, 47%, 96%);
-    --color-text-light-gray: hsl(228, 12%, 44%);
+    --color-card-bg-light-hover: hsl(228, 33%, 91%);
+    --color-text-light-gray: hsl(230, 12%, 44%);
     --color-text-light-dark: hsl(230, 17%, 14%);
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--color-bg-dark);
+        --text-color: var(--color-text-dark-white);
+        --text-color2: var(--color-text-dark-gray);
+        --card-bg: var(--color-card-bg-dark);
+        --card-bg-hover: var(--color-card-bg-dark-hover);
+        --toggle: var(--color-bg-light);
+        --toggle-bg: linear-gradient(225deg,
+                var(--color-toggle-gradient-bg-end-dark) 0%,
+                var(--color-toggle-gradient-bg-start-dark) 98.02%);
+        --toggle-button: var(--color-bg-dark);
+    }
+}
+
+body.light {
+    --background: var(--color-bg-light);
+    --text-color: var(--color-text-light-dark);
+    --text-color2: var(--color-text-light-gray);
+    --card-bg: var(--color-card-bg-light);
+    --card-bg-hover: var(--color-card-bg-light-hover);
+    --toggle: var(--color-bg-dark);
+    --toggle-bg: linear-gradient(225deg,
+            var(--color-toggle-gradient-bg-end-light) 0%,
+            var(--color-toggle-gradient-bg-start-light) 98.02%);
+    --toggle-button: var(--color-bg-dark);
+}
+
+body.dark {
+    --background: var(--color-bg-dark);
+    --text-color: var(--color-text-dark-white);
+    --text-color2: var(--color-text-dark-gray);
+    --card-bg: var(--color-card-bg-dark);
+    --card-bg-hover: var(--color-card-bg-dark-hover);
+    --toggle: var(--color-bg-light);
+    --toggle-bg: linear-gradient(225deg,
+            var(--color-toggle-gradient-bg-end-dark) 0%,
+            var(--color-toggle-gradient-bg-start-dark) 98.02%);
+    --toggle-button: var(--color-bg-dark);
+}
